@@ -1,0 +1,14 @@
+extends layout
+
+
+
+
+block content
+  h1= title
+  each message in messages
+    p from: #{message.user}
+    p sent: #{message.added}
+    p #{message.text}
+    br
+
+  a(href=newURL.url+'') New Message
